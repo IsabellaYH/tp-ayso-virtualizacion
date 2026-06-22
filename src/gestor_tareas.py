@@ -6,7 +6,7 @@ from validaciones import validar_tarea
 def agregar_tarea(tareas, descripcion):
     """Agrega una tarea válida a la lista."""
     if not validar_tarea(descripcion):
-        return False, "Error: la tarea no puede estar vacía."
+        return False, "Error: la tarea no puede estar vacía ni contener solo espacios."
 
     tareas.append(descripcion.strip())
     return True, "Tarea agregada correctamente."
@@ -20,9 +20,13 @@ def listar_tareas(tareas):
 
 
 def buscar_tareas(tareas, termino):
-    """Busca tareas que contengan el término indicado."""
+    """Busca tareas que contengan el término indicado.
+
+    Retorna una tupla (encontradas, mensaje_error).
+    Si el término es inválido, retorna lista vacía con mensaje descriptivo.
+    """
     if not validar_tarea(termino):
-        return []
+        return [], "El término de búsqueda no puede estar vacío."
 
     termino_normalizado = termino.strip().lower()
     coincidencias = [
@@ -30,7 +34,7 @@ def buscar_tareas(tareas, termino):
         for indice, tarea in enumerate(tareas, start=1)
         if termino_normalizado in tarea.lower()
     ]
-    return coincidencias
+    return coincidencias, None
 
 
 def eliminar_tarea(tareas, numero_tarea):
