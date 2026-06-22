@@ -30,41 +30,36 @@ def main():
             print("Opción inválida. Ingrese un número entre 1 y 5.")
             continue
 
-        try:
-            if opcion == 1:
-                descripcion = input("Ingrese la descripción de la tarea: ")
-                exito, mensaje = agregar_tarea(tareas, descripcion)
-                print(mensaje)
-                if not exito:
-                    print("Intente nuevamente con un texto válido.")
+        if opcion == 1:
+            descripcion = input("Ingrese la descripción de la tarea: ")
+            exito, mensaje = agregar_tarea(tareas, descripcion)
+            print(mensaje)
 
-            elif opcion == 2:
-                print("\n--- Lista de tareas ---")
-                for linea in listar_tareas(tareas):
-                    print(linea)
+        elif opcion == 2:
+            print("\n--- Lista de tareas ---")
+            for linea in listar_tareas(tareas):
+                print(linea)
 
-            elif opcion == 3:
-                termino = input("Ingrese término a buscar: ")
-                resultados = buscar_tareas(tareas, termino)
-                if resultados:
-                    print("\nCoincidencias encontradas:")
-                    for indice, tarea in resultados:
-                        print(f"{indice}. {tarea}")
-                else:
-                    print("No se encontraron tareas con ese criterio.")
+        elif opcion == 3:
+            termino = input("Ingrese término a buscar: ")
+            resultados, error = buscar_tareas(tareas, termino)
+            if error:
+                print(error)
+            elif resultados:
+                print("\nCoincidencias encontradas:")
+                for indice, tarea in resultados:
+                    print(f"{indice}. {tarea}")
+            else:
+                print("No se encontraron tareas con ese criterio.")
 
-            elif opcion == 4:
-                numero = input("Ingrese el número de la tarea a eliminar: ")
-                exito, mensaje = eliminar_tarea(tareas, numero)
-                print(mensaje)
+        elif opcion == 4:
+            numero = input("Ingrese el número de la tarea a eliminar: ")
+            exito, mensaje = eliminar_tarea(tareas, numero)
+            print(mensaje)
 
-            elif opcion == 5:
-                print("Saliendo del sistema. ¡Hasta luego!")
-                break
-
-        except Exception as error:  # Protección general ante errores de entrada inesperados
-            print(f"Ocurrió un error inesperado: {error}")
-            print("El sistema continuará en ejecución.")
+        elif opcion == 5:
+            print("Saliendo del sistema. ¡Hasta luego!")
+            break
 
 
 if __name__ == "__main__":
