@@ -20,8 +20,8 @@ tp-virtualizacion-python/
 │   └── validaciones.py
 ├── docs/
 │   ├── informe.md
-│   └── evidencias.md
-├── capturas/
+|   ├── TPI_AYSO_Virtualización.pdf 
+│   └── VIDEO EXPLICATIVO
 ├── README.md
 ├── requirements.txt
 └── .gitignore
@@ -43,9 +43,6 @@ python src/main.py
 - Eliminar tarea: elegir opción `4` e ingresar número de la tarea.
 - Salir: elegir opción `5`.
 
-## Evidencias de virtualización
-Registrar capturas en `capturas/` y documentar resultados en `docs/evidencias.md`.
-
 ## Snapshots en VirtualBox
 1. Crear una VM base con Python instalado.
 2. Tomar un snapshot inicial.
@@ -60,11 +57,10 @@ Registrar capturas en `capturas/` y documentar resultados en `docs/evidencias.md
 ## Validación de aislamiento entre AlumnoA_VM y AlumnoB_VM
 1. En `AlumnoA_VM`, agregar tareas y registrar resultado.
 2. En `AlumnoB_VM`, iniciar la app limpia y verificar que no aparezcan tareas de `AlumnoA_VM`.
-3. Documentar evidencia visual en `capturas/`.
+3. Documentar evidencia visual en `docs/TPI_AYSO_Virtualización.pdf`.
 
 ## Video explicativo 
  - link drive https://drive.google.com/file/d/1HyTnPtenFaaSbkzPmn4Z3taWRGlsdGAy/view?usp=sharing
 
  ## Capturas y evidencias 
   - TPI_AYSO_Virtualizacion.pdf https://drive.google.com/file/d/1AqjsMBH5Ke_DF2B3MlxZav17ziYVFH4F/view?usp=sharing 
-  
