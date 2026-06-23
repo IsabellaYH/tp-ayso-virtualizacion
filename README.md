@@ -61,3 +61,10 @@ Registrar capturas en `capturas/` y documentar resultados en `docs/evidencias.md
 1. En `AlumnoA_VM`, agregar tareas y registrar resultado.
 2. En `AlumnoB_VM`, iniciar la app limpia y verificar que no aparezcan tareas de `AlumnoA_VM`.
 3. Documentar evidencia visual en `capturas/`.
+
+## Video explicativo 
+ - link drive https://drive.google.com/file/d/1HyTnPtenFaaSbkzPmn4Z3taWRGlsdGAy/view?usp=sharing
+
+ ## Capturas y evidencias 
+  - TPI_AYSO_Virtualizacion.pdf https://drive.google.com/file/d/1AqjsMBH5Ke_DF2B3MlxZav17ziYVFH4F/view?usp=sharing 
+  
